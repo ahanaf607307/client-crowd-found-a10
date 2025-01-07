@@ -79,9 +79,9 @@ const routes = createBrowserRouter([
       {
         path: "/details/:id",
         element: (
-          <PrivateRoute>
+
             <Details />
-          </PrivateRoute>
+
         ),
         loader: ({ params }) =>
           fetch(`https://server-croud-funding.vercel.app/details/${params.id}`),
