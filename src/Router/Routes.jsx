@@ -22,7 +22,7 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://server-croud-funding.vercel.app/campaigns"),
+        
       },
       {
         path: "/navbar",

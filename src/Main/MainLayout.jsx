@@ -1,6 +1,6 @@
 
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
@@ -17,7 +17,7 @@ function MainLayout() {
   }, [setIsLoading]);
 
   return (
-    <div className="md:w-[800px] lg:w-[1024px] h-screen mx-auto flex flex-col">
+    <div className=" h-screen mx-auto flex flex-col">
       {isLoading ? (
         <div className="flex items-center justify-center h-screen">
           <div>
@@ -48,10 +48,10 @@ function MainLayout() {
         </div>
       ) : (
         <>
-          <section>
+          <section className="mb-6">
             <Navbar />
           </section>
-          <section className="flex-1">
+          <section className="flex-1 ">
             <Outlet />
           </section>
           <section>

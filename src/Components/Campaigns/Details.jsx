@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../FireBase/AuthProvider";
-import { Helmet } from "react-helmet-async";
 
 function Details() {
   const detail = useLoaderData();
@@ -63,7 +63,7 @@ function Details() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center border-2 my-20 rounded-md shadow-xl bg-blue-100 gap-5 p-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center  my-20 rounded-md border  gap-5 p-5 max-w-7xl mx-auto">
       <Helmet>
         <title>Details | PlanMake</title>
       </Helmet>
@@ -71,7 +71,7 @@ function Details() {
         <img src={imageUrl} className="w-full rounded-xl" />
       </div>
       <div>
-        <h1 className="bg-blue-400 px-2 py-1 md:w-4/12 text-center rounded-md font-semibold text-white">
+        <h1 className="bg-[#8940d0] px-2 py-1 md:w-4/12 text-center rounded-md font-semibold text-white">
           {campignsType}
         </h1>
         <h1 className="text-3xl font-semibold my-5">{campignsName}</h1>
@@ -92,7 +92,7 @@ function Details() {
         </section>
         <div className="flex justify-end px-5">
           <button
-            className="btn bg-blue-400 text-white"
+            className="btn bg-[#8940d0] text-white"
             onClick={() => handleDonate(_id)}
           >
             Donate

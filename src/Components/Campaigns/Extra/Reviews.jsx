@@ -5,11 +5,11 @@ import { Typewriter } from "react-simple-typewriter";
 
 function Reviews() {
   return (
-    <div className="md:p-5 ">
-      <h1 className="text-2xl md:text-3xl font-semibold text-center text-blue-500">
+    <div className="md:p-5 max-w-7xl mx-auto ">
+      <h1 className="text-2xl md:text-3xl font-semibold text-center text-[#fd9940]">
         -- What People Say --
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-5 md:gap-10 lg:gap-20 my-10">
         <Fade>
         <div className="card w-80 border-2 p-3">
           <div className="flex gap-x-3 items-center">
@@ -39,7 +39,7 @@ function Reviews() {
           <hr />
           <div className="flex gap-4 items-center text-sm mt-2">
             <h1>Rating :</h1>{" "}
-            <section className="text-orange-400 flex gap-4">
+            <section className="text-[#fd9940] flex gap-4">
               <FaStar />
               <FaStar />
               <FaStar />

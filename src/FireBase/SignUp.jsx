@@ -1,8 +1,11 @@
+import Lottie from "lottie-react";
 import React, { useContext } from "react";
-import { AuthContext } from "./AuthProvider";
+import { Helmet } from "react-helmet-async";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { Helmet } from "react-helmet-async";
+import loginLottie from '../assets/login.json';
+import { AuthContext } from "./AuthProvider";
+
 
 function SignUp() {
   const { registerUserNew , setUsers ,updateProfileUser , setErrorInvalid,errorInvalid} = useContext(AuthContext);
@@ -66,7 +69,9 @@ function SignUp() {
      
   };
   return (
-    <div className="border-2 rounded-xl shadow-2xl md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-14 items-center justify-center">
+      <div> <Lottie animationData={loginLottie}/></div>
+      <div><div className=" md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
       <Helmet>
         <title>Regiser/SignUp | PlanMake</title>
       </Helmet>
@@ -133,6 +138,7 @@ function SignUp() {
           Login
         </Link>{" "}
       </h1>
+    </div></div>
     </div>
   );
 }

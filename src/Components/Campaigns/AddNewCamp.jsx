@@ -39,13 +39,13 @@ function AddNewCamp() {
   };
   
   return (
-    <div className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto'>
+    <div className='max-w-3xl bg-red-100 rounded-xl p-10 md:py-28 mx-auto'>
       <Helmet>
         <title>Add New Campaign | PlanMake</title>
       </Helmet>
       <h1 className='text-center font-semibold text-3xl my-6'>Add New Campaign</h1>
      <form onSubmit={handleAddCamp}>
-    <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
+    <div className='grid md:grid-cols-2 text-gray-600 font-semibold items-center justify-center '>
     <div>
      <label className="form-control w-full max-w-xs">
           <div className="label">
@@ -144,7 +144,7 @@ function AddNewCamp() {
         <input
           type="submit"
           value="Add Campaign"
-          className="btn w-full bg-blue-500 text-white font-semibold mt-5"
+          className="btn w-full bg-[#8940d0] text-white font-semibold mt-5"
         />
      </form>
     </div>

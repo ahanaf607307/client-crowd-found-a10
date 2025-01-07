@@ -5,15 +5,27 @@
 @tailwind utilities;
 
 #navbar a.active {
-  background: rgba(0, 93, 233, 0.651);
+  background-color: transparent;
+  border: 2px solid #da7568;
+  border-top: none;
+  border-right: none;
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
 
 * {
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
   font-family: "Poppins", serif;
   scroll-behavior: smooth;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

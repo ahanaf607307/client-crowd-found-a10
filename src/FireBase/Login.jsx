@@ -1,9 +1,11 @@
+import Lottie from "lottie-react";
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
+import { IoLogoGoogleplus } from "react-icons/io";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import loginLottie from '../assets/login.json';
 import { AuthContext } from "./AuthProvider";
-import { IoLogoGoogleplus } from "react-icons/io";
-import { Helmet } from "react-helmet-async";
 
 function Login() {
   const { loginExUser, setUsers, googleSignIn, errorInvalid, setErrorInvalid } =
@@ -81,7 +83,11 @@ function Login() {
     };
   };
   return (
-    <div className="border-2 rounded-xl shadow-2xl md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-14 items-center justify-center">
+      <div className="">
+      <Lottie animationData={loginLottie}/>
+      </div>
+      <div><div className=" md:w-[500px] my-10 md:my-32 mx-auto p-4 m-2 md:p-10 ">
       <Helmet>
         <title>Login | PlanMake</title>
       </Helmet>
@@ -123,6 +129,7 @@ function Login() {
           Register
         </Link>{" "}
       </h1>
+    </div></div>
     </div>
   );
 }

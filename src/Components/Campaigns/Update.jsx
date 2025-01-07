@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../FireBase/AuthProvider";
-import { Helmet } from "react-helmet-async";
 
 function Update() {
   const { users } = useContext(AuthContext);
@@ -47,11 +47,11 @@ function Update() {
       
   };
   return (
-    <div  className='md:w-10/12 border-2 rounded-xl p-10 md:my-20 mx-auto shadow-xl'>
+    <div  className='max-w-3xl bg-red-100 rounded-xl p-10 md:py-28 mx-auto '>
       <Helmet>
         <title>Update Campaign | PlanMake</title>
       </Helmet>
-      <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-blue-500">{campaigns?.campignsName}</span></h1>
+      <h1 className="text-center font-semibold my-5 text-2xl">Update Campaign : <span className="text-[#fd9940]">{campaigns?.campignsName}</span></h1>
       <form onSubmit={handleAddCamp} >
         <div className='grid md:grid-cols-2 text-gray-600 font-semibold'>
           <div>
@@ -164,7 +164,7 @@ function Update() {
         <input
           type="submit"
           value="Update Campaign"
-          className="btn w-full bg-blue-500 my-5 text-white"
+          className="btn w-full bg-[#8940d0] my-5 text-white"
         />
       </form>
     </div>

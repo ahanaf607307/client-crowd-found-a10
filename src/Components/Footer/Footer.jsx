@@ -4,38 +4,19 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className="footer text-base-content p-10">
-  <nav>
-  <Link className="btn btn-ghost text-xl text-blue-500">
-        <FaFirefoxBrowser className="text-blue-500 text-2xl"/> PlanMake
+    <footer className="footer footer-center bg-[#8940d0] text-primary-content p-10">
+    <aside>
+    <Link className="btn btn-ghost text-xl text-[#fff]">
+        <FaFirefoxBrowser className="text-[#fd9940]  text-2xl"/> PlanMake
         </Link>
-    <p>
+        <p>
       PlanMake LTD Limited
       <br />
-      By Ahanaf Mubasshir Rishad 2024
+      By Ahanaf Mubasshir Rishad © {new Date().getFullYear()} - All right reserved
     </p>
-  </nav>
-  <nav>
-
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
-  </nav>
-  <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-   
-  </nav>
-  <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
-  </nav>
-</footer>
+    
+    </aside>
+  </footer>
   )
 }
 

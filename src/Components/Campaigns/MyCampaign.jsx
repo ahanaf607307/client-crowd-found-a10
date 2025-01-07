@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
-import { Link, useLoaderData } from 'react-router-dom'
-import Swal from 'sweetalert2'
-import { MdDeleteForever } from "react-icons/md";
-import { BiSolidEdit } from "react-icons/bi";
-import { AuthContext } from '../../FireBase/AuthProvider'
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { BiSolidEdit } from "react-icons/bi";
+import { MdDeleteForever } from "react-icons/md";
+import { Link, useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../FireBase/AuthProvider';
 
 function MyCampaign() {
   const campaigns = useLoaderData()
@@ -44,12 +44,12 @@ function MyCampaign() {
     });
   }
   return (
-    <div className='my-12'>
+    <div className='my-20 max-w-7xl mx-auto'>
       <Helmet>
         <title>My Campaign | PlanMake</title>
       </Helmet>
       <h1 className='text-center text-3xl md:text-4xl font-semibold'>{users.displayName}-Campaigns</h1>
-      <h1 className='text-2xl text-blue-500 my-5 font-semibold'>Your Total Campaign : {
+      <h1 className='text-2xl text-[#fd9940] my-5 font-semibold'>Your Total Campaign : {
         campaigns.length
       }</h1>
 

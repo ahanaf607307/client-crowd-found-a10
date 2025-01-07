@@ -9,15 +9,15 @@ function MyDonations() {
   return (
   
 
-    <>
+    <div className=' py-20  bg-gray-200'>
     <Helmet>
         <title>My Donation | PlanMake</title>
       </Helmet>
     <Fade>
-    <h1 className='text-center font-semibold text-3xl md:text-4xl mt-10'>You Donated At : <span className='text-blue-500'>{camps.length}</span> Campaign's</h1>
-       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 mb-5' >
+    <h1 className='text-center font-semibold text-3xl md:text-4xl mt-10'>You Donated At : <span className='text-[#fd9940]'>{camps.length}</span> Campaign's</h1>
+       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 mb-5 max-w-7xl mx-auto ' >
      {
-   camps?.map(camp => <div key={camp.detail._id} className="card flex flex-col h-[420px] card-compact bg-base-100  shadow-xl ">
+   camps?.map(camp => <div key={camp.detail._id} className="card flex flex-col h-[420px] card-compact border bg-white/90">
      <div className='flex-1'>
        <img
          src={camp.detail?.imageUrl}
@@ -41,7 +41,7 @@ function MyDonations() {
  </div> 
     
     </Fade>
-    </>
+    </div>
   )
 }
 

@@ -1,17 +1,14 @@
 import React from 'react'
 
-import RunningCampCard from './RunningCampCard'
 import { Typewriter } from 'react-simple-typewriter'
+import RunningCampCard from './RunningCampCard'
 
 
-function RunningCampaigns({runningCampData}) {
+function RunningCampaigns({runningCampData , campLoading}) {
 
-
-  
-  
 
   return (
-    <div>
+    <div className='max-w-7xl mx-auto'>
    
       <h1 className='text-sm text-orange-600 text-center font-bold mt-4 lg:mt-14'><Typewriter
             words={['- BUSINESSES YOU CAN BACK -']}
@@ -35,7 +32,7 @@ function RunningCampaigns({runningCampData}) {
       </h1>
 <div className='grid p-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
   {
-    runningCampData.map(camps=><RunningCampCard key={camps?._id} camps={camps} /> )
+    runningCampData.map(camps=><RunningCampCard key={camps?._id} camps={camps} campLoading={campLoading} /> )
   }
 </div>
     </div>
