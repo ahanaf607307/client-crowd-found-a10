@@ -13,6 +13,9 @@ import SignUp from "../FireBase/SignUp";
 import ErrorPage from "../Main/ErrorPage";
 import Home from "../Main/Home";
 import MainLayout from "../Main/MainLayout";
+import Aboutus from "../Components/Aboutus/Aboutus";
+import Contactus from "../Components/Contactus/Contactus";
+import AboutUs from "../Components/Aboutus/Aboutus";
 
 const routes = createBrowserRouter([
   {errorElement:<ErrorPage/>,
@@ -36,6 +39,14 @@ const routes = createBrowserRouter([
         path: "/allCamp",
         element: <AllCamp />,
         loader: () => fetch("https://server-croud-funding.vercel.app/campaign"),
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs />
+      },
+      {
+        path: "/Contactus",
+        element: <Contactus />
       },
       {
         path: "/addNewCamp",

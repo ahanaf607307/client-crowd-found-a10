@@ -29,3 +29,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@layer utilities {
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75%, 100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping-slow {
+    animation: ping-slow 6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}

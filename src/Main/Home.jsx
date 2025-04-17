@@ -4,6 +4,10 @@ import Banner from '../Components/Campaigns/Banner'
 import Discovar from '../Components/Campaigns/Extra/Discovar'
 import Reviews from '../Components/Campaigns/Extra/Reviews'
 import RunningCampaigns from '../Components/Campaigns/RunningCampaigns'
+import HowItworks from '../Home/HowItworks'
+import Faq from '../Home/Faq'
+import Advertisement from '../Home/Advertisement'
+import StartCampain from '../Components/StartCampain/StartCampain'
 
 
 function Home() {
@@ -32,10 +36,21 @@ const fetchData = async () => {
     <div>
     <RunningCampaigns runningCampData={runningCampData} campLoading={campLoading}/>
     </div>
+
       <div className='my-16'>
         <Discovar/>
       </div>
+      <StartCampain/>
       <div className='my-16'>
+        <HowItworks/>
+      </div>
+      <div >
+        <Advertisement/>
+      </div>
+      <div >
+        <Faq/>
+      </div>
+      <div >
         <Reviews/>
       </div>
     </div>

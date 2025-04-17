@@ -1,82 +1,35 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import sliderOne from "../../assets/b1.jpg";
-import sliderTwo from "../../assets/b2.jpg";
-import sliderThree from "../../assets/b3.jpg";
-import sliderFour from "../../assets/b4.jpg";
+import { Link } from "react-router-dom";
+
 function Banner() {
   return (
-    <div>
-      <Fade>
-      <Swiper
-      pagination={true}
-      modules={[Pagination]}
-      className="h-[400px] max-w-[2000px] mx-auto md:h-[500px] lg:h-[650px] rounded-xl"
-    >
-      <SwiperSlide>
-        <img
-          className="w-full h-[200px] md:h-[400px] lg:h-[700px]  "
-          src={sliderOne}
-          alt=""
-          
-        />
-      
-        <div className="absolute md:bottom-32 lg:bottom-14 bottom-16">
+    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 text-white flex items-center justify-center overflow-hidden px-4">
+      <div className="text-center max-w-3xl">
+        <h1 className="text-3xl md:text-5xl font-bold leading-snug md:leading-tight mb-4">
+          Empowering Ideas, Together.
+        </h1>
+        <p className="text-base md:text-lg font-light text-white/90 mb-6">
+          Join a community where every contribution counts and ideas turn into impact.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  <Link to="/allCamp">
+    <button className="px-6 py-3 bg-white text-indigo-700 font-semibold rounded-lg hover:bg-gray-200 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      Get Started
+    </button>
+  </Link>
 
-            <Fade>
-          <h1 className="text-sm md:text-2xl font-semibold text-[#fb944f]  bg-white/70 px-3 py-2 animate__animated animate__fadeInLeft">A community-driven platform to bring ideas to life.</h1>
-            </Fade>
-        </div>
+  <Link to="/allCamp">
+    <button className="px-6 py-3 border border-white font-semibold rounded-lg hover:bg-white hover:text-indigo-700 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      Learn More
+    </button>
+  </Link>
+</div>
+
+      </div>
+
       
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          className="w-full h-[200px] md:h-[400px] lg:h-[700px] "       
-          src={sliderTwo}
-          alt=""
-          
-        />
-        <div className="absolute md:bottom-32 lg:bottom-14 bottom-16">
-         <Fade>
-         <h1 className="text-sm md:text-2xl font-semibold text-[#fb944f] bg-white/70 px-3 py-2 animate__animated animate__fadeInLeft">Where small contributions grow big dreams.</h1>
-         </Fade>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          className="w-full h-[200px] md:h-[400px] lg:h-[700px] "
-          src={sliderThree}
-          alt=""
-          
-        />
-        <div className="absolute md:bottom-32 lg:bottom-14 bottom-16">
-          <Fade>
-          <h1 className="text-sm md:text-2xl font-semibold text-[#fb944f] bg-white/70 px-3 py-2 animate__animated animate__fadeInLeft">Empowering projects with the power of community</h1>
-          </Fade>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          className="w-full h-[200px] md:h-[400px] lg:h-[700px] "
-          src={sliderFour}
-          alt=""
-          
-        />
-        <div className="absolute md:bottom-32 lg:bottom-14 bottom-16">
-         <Fade> 
-         <h1 className="text-sm md:text-2xl font-semibold text-[#fb944f] bg-white/70 px-3 py-2 animate__animated animate__fadeInLeft">Weaving support for innovative ideas</h1>
-         </Fade>
-        </div>
-      </SwiperSlide>
-    </Swiper>
-      </Fade>
     </div>
   );
 }
 
 export default Banner;
-
